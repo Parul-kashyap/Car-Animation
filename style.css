@@ -1,0 +1,167 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  overflow: hidden;
+
+}
+
+#btn1{
+  height: 2rem;
+  width: 5rem;
+  z-index: 1;
+  position: absolute;
+  left: 40%;
+  top: 2rem;
+  background: linear-gradient(white, green);
+}
+#btn1:active{
+  background: linear-gradient(green,white);
+}
+#btn2{
+  height: 2rem;
+  width: 5rem;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  background: linear-gradient(white, red);
+}
+#btn2:active{
+  background: linear-gradient(red,white);
+}
+
+.sky{
+  height: 100vh;
+  width: 100%;
+  background-image: url(sky2.webp);
+  background-repeat: no-repeat;
+  position: absolute;
+  margin-top: -1rem;
+  padding: 0;
+  animation: sky linear 3s infinite;
+  animation-play-state: paused;
+}
+
+.trees{
+  height: 70vh;
+  width: 200%;
+  background-image: url(trees3.png);
+  background-repeat: repeat-x;
+  margin: 0 auto;
+  padding: 0 auto;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  animation: tree linear 2s infinite;
+  animation-play-state: paused;
+}
+
+.track{
+  height: 70vh;
+  width: 200%;
+  background-image: url(track.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  animation: trackBack linear 1s infinite;
+  animation-play-state: paused;
+}
+
+.obstacles{
+  height: 20vh;
+  width: 20vh;
+  background-image: url(obstacle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 4.4rem;
+  left: 20rem;
+}
+
+.car{
+  height: 50vh;
+  width: 80vw;
+  margin: 0;
+  padding: 0;
+  background-image: url(car.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -10px;
+  left: 3rem;
+  animation: car linear 2s infinite;
+  animation-play-state: paused;
+}
+
+.tyre1{
+  height: 8.5vh;
+  width: 8.5vh;
+  background-image: url(car_tyre.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 6rem;
+  left: 2.4rem;
+  animation: wheelRotation linear 0.3s infinite;
+  animation-play-state: paused;
+}
+.tyre2{
+  height: 8.5vh;
+  width: 8.5vh;
+  background-image: url(car_tyre.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 16.3vh;
+  left: 14.8vw;
+  animation: wheelRotation linear 0.3s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes wheelRotation {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes trackBack {
+  100%{
+    transform: translateX(-61.5vw);
+  }
+}
+
+@keyframes sky {
+  0%{
+    transform: translateY(-4px);
+    }
+  60%{
+    transform: translateY(3px);
+     }
+  100%{
+    transform: translateY(-4px);
+      }
+}
+
+@keyframes tree {
+   100%{
+    /* transform: translateY(2px); */
+    transform: translateY(5px);
+    transform: translateY(-5px);
+    transform: translateX(-93.5vw);
+      }
+}
+@keyframes car {
+   0%{
+    transform: translateY(2px);
+      }
+   50%{
+    transform: translateY(-2px);
+      }
+   100%{
+    transform: translateY(2px);
+      }
+}
